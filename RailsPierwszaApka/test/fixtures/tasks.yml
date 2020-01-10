@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  desription: MyString
+  due_date: 2020-01-10
+  position: 
+  done_status: false
+
+two:
+  id: 
+  desription: MyString
+  due_date: 2020-01-10
+  position: 
+  done_status: false
