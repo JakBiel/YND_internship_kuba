@@ -6,6 +6,10 @@ class ProjectsController < ApplicationController
 
   def show
       @project = Project.find(params[:id])
+
+      if stale?(last_modified: @project.updated_at, public: true)
+        render json: @project
+      end
   end
 
   def new
