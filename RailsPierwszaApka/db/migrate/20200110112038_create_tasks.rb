@@ -6,7 +6,7 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.integer :position
       t.boolean :done_status
 
-      t.timestamps
+        #t.timestamps
     end
   end
 end

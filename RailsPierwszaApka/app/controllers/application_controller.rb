@@ -9,4 +9,3 @@ class ProjectsController < ApplicationController
 
 end
 end
-  
