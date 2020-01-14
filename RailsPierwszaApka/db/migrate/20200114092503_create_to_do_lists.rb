@@ -5,6 +5,7 @@ class CreateToDoLists < ActiveRecord::Migration[5.2]
       t.string :project_id
 
         #t.timestamps
+      t.references :project, foreign_key: true
     end
   end
 end

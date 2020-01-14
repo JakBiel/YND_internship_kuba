@@ -14,6 +14,8 @@ ActiveRecord::Schema.define(version: 2020_01_14_092503) do
 
   create_table "comments", force: :cascade do |t|
     t.string "body"
+    t.integer "task_id"
+    t.index ["task_id"], name: "index_comments_on_task_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -26,11 +28,14 @@ ActiveRecord::Schema.define(version: 2020_01_14_092503) do
     t.date "due_date"
     t.integer "position"
     t.boolean "done_status"
+    t.integer "to_do_list_id"
+    t.index ["to_do_list_id"], name: "index_tasks_on_to_do_list_id"
   end
 
   create_table "to_do_lists", force: :cascade do |t|
     t.string "name"
-    t.string "project_id"
+    t.integer "project_id"
+    t.index ["project_id"], name: "index_to_do_lists_on_project_id"
   end
 
 end

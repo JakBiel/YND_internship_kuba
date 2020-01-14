@@ -7,6 +7,7 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.boolean :done_status
 
         #t.timestamps
+      t.references :to_do_list, foreign_key: true
     end
   end
 end
