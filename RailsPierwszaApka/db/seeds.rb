@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Project.create("name"=>"Nazwa_nr_1", "description"=>"Opis_nr_1")
+Project.create("name"=>"Nazwa_nr_2", "description"=>"Opis_nr_2")
+Project.create("name"=>"Nazwa_nr_1", "description"=>"Opis_nr_1")
+To_do_list.create("name"=>"Moja_todolista_1", "project_id"=>1)
+To_do_list.create("name"=>"Moja_todolista_2", "project_id"=>2)
+To_do_list.create("name"=>"Moja_todolista_3", "project_id"=>2)
+Task.create("description"=>"Opis mojego taska nr 1", "due_date"=>Fri, 14 Jul 2017, "position"=>4, "done_status"=>true, "to_do_list_id"=>2)
+Task.create("description"=>"Opis mojego taska nr 2", "due_date"=>Sat, 01 Jul 2017, "position"=>6, "done_status"=>false, "to_do_list_id"=>2)
+Comment.create("body"=>"Moj_maly_komentarz_1", "task_id"=>2)
+Comment.create("body"=>"Moj_maly_komentarz_2", "task_id"=>2)
+Comment.create("body"=>"Moj_maly_komentarz_1", "task_id"=>2)

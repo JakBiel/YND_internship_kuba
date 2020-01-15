@@ -1,5 +1,4 @@
 
-=begin
 namespace :export do
   desc "Prints Project.all, To_do_list.all, Task.all, Comments.all in a seeds.rb way."
 
@@ -10,7 +9,7 @@ namespace :export do
   end
 
   task :seeds_format => :environment do
-    To_do_list.order(:id).all.each do |to_do_list|
+    ToDoList.order(:id).all.each do |to_do_list|
       puts "To_do_list.create(#{to_do_list.serializable_hash.delete_if {|key, value| ['created_at','updated_at','id'].include?(key)}.to_s.gsub(/[{}]/,'')})"
     end
   end
@@ -27,4 +26,3 @@ namespace :export do
     end
   end
 end
-=end

@@ -18,6 +18,7 @@ class ToDoListsController < ApplicationController
   end
 
   def create
+    Rails.logger.info(params)
     @to_do_list = ToDoList.create(to_do_list_params.merge(project_id: params[:project_id]))
 
     render json: @to_do_list
