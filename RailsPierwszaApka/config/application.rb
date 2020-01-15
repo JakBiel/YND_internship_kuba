@@ -8,9 +8,17 @@ Bundler.require(*Rails.groups)
 
 module RailsPierwszaApka
   class Application < Rails::Application
+
     config.api_only = true
        # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'localhost:3006', '127.0.0.1:3006', /http:\/\/192\.168\.0\.\d{1,3}(:\d+)?/
+        resource '*', headers: :any, methods: [:get, :post, :options]
+      end
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -18,3 +26,4 @@ module RailsPierwszaApka
     # the framework and any gems in your application.
   end
 end
+
