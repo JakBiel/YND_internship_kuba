@@ -1,7 +1,12 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+
+    if params[:done_status] == nil
+      @tasks = Task.where(to_do_list_id: params[:to_do_list_id]).all
+    else
+      @tasks = Task.where(done_status: params[:done_status], to_do_list_id: params[:to_do_list_id]).all
+    end
 
     render json: @tasks
   end

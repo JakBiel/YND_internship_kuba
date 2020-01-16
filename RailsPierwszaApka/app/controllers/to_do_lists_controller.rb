@@ -3,7 +3,6 @@ class ToDoListsController < ApplicationController
   def index
     @to_do_lists = ToDoList.where(project_id: params[:project_id]).all
 
-
     render json: @to_do_lists
   end
 

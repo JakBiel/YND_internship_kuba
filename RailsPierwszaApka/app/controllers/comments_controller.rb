@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    @comments =Comment.all
+    @comments = Comment.where(task_id: params[:task_id]).all
 
     render json: @comments
   end
