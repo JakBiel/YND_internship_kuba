@@ -1,7 +1,6 @@
 class ToDoListsController < ApplicationController
 
   def index
-    #@to_do_lists = ToDoList.all
     @to_do_lists = ToDoList.where(project_id: params[:project_id]).all
 
 

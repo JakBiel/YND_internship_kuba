@@ -17,14 +17,14 @@ class TasksController < ApplicationController
 
   def create
     Rails.logger.info(params)
-    @task = Task.create!(task_params.merge(to_do_list_id: params[:to_do_list_id]))
+    @task = Task.create(task_params.merge(to_do_list_id: params[:to_do_list_id]))
 
     render json: @task
   end
 
   private
   def task_params
-    params.require(:task).permit(:description, :due_date, :position, :done_status)
+    params.require(:task).permit(:name, :description, :due_date, :position, :done_status)
   end
 
 
