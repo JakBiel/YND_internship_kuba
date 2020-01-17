@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_16_103806) do
+ActiveRecord::Schema.define(version: 2020_01_16_153346) do
 
   create_table "comments", force: :cascade do |t|
     t.string "body"
@@ -37,6 +37,17 @@ ActiveRecord::Schema.define(version: 2020_01_16_103806) do
     t.string "name"
     t.integer "project_id"
     t.index ["project_id"], name: "index_to_do_lists_on_project_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "widgets", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
