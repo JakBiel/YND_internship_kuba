@@ -30,7 +30,6 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     @task = Task.update!(task_params)
-    redirect_to task
 
     render json: @task
   end
