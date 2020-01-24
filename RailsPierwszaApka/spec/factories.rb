@@ -4,8 +4,19 @@ FactoryBot.define do
     description  { "Test" }
   end
 
+  factory :to_do_list do
+    association :project
+    name { "TestRSPECowyToDOList"}
+  end
 
-factory :to_do_list do
-  name { "To_do_lista_Test_RSpecowy"}
-end
+  factory :task do
+    association :to_do_list
+    name { "Moj_RSPECowy_Task_nr_1"}
+    description { "Deskrypcja_Taska_1"}
+    due_date { "2010-12-11" }
+    position { 34 }
+    done_status { false }
+  end
+
+
 end
