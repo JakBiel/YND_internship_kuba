@@ -27,6 +27,12 @@ class TasksController < ApplicationController
     render json: @task
   end
 
+  def update
+    @task = Task.find(params[:id])
+    Task.update!(task_params)
+    redirect_to task
+  end
+
   private
   def task_params
     params.require(:task).permit(:name, :description, :due_date, :position, :done_status)
