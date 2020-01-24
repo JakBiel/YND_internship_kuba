@@ -29,7 +29,7 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    @task = Task.update!(task_params)
+    @task = Task.update(task_params.merge(to_do_list_id: params[:to_do_list_id]))
 
     render json: @task
   end
