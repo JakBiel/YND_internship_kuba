@@ -31,6 +31,8 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     Task.update!(task_params)
     redirect_to task
+
+    render json: @task
   end
 
   private
