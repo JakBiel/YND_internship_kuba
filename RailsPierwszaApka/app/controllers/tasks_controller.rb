@@ -28,6 +28,8 @@ class TasksController < ApplicationController
   end
 
   def update
+
+    Rails.logger.info(params)
     @task = Task.find(params[:id])
     @task = Task.update(task_params.merge(to_do_list_id: params[:to_do_list_id]))
     redirect_to @task
