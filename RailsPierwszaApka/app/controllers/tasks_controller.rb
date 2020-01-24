@@ -30,8 +30,8 @@ class TasksController < ApplicationController
   def update
 
     Rails.logger.info(params)
-    #@task = Task.find(params[:id])
-    @task = Task.update(task_params.merge(to_do_list_id: params[:to_do_list_id]))
+    @task = Task.find(params[:id])
+    @task.update( params.require(:task).permit( :done_status))
 
     render json: @task
   end
