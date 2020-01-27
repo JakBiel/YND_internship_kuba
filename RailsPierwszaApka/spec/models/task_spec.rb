@@ -26,20 +26,32 @@ RSpec.describe Task, type: :model do
       it "is fulled with any kind of a date" do
         expect(task.due_date).not_to be_nil
       end
-      #it "has a proper date format" do
-      #  expect(task.due_date).to
-      #end
+      it "has a proper date format" do
+        expect(Date.iso8601(task.due_date)).not_to be_nil
+      end
     end
 
     context "Parameter <<position>>" do
       it "is fulled with any kind of a position" do
         expect(task.position).not_to be_nil
       end
+
+      it "is above 0" do
+      expect(task.position).to be > 0
+      end
     end
 
     context "Parameter <<done_status>>" do
       it "is fulled with any kind of a done_status" do
         expect(task.done_status).not_to be_nil
+      end
+
+      it "checks if it is a boolean type" do
+        expect(task.done_status.is_a?(Boolean)).to be_truthy
+      end
+
+      it "checks if it is a boolean value of false" do
+        expect(task.done_status).to be == false
       end
     end
 
