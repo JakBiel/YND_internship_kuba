@@ -18,7 +18,7 @@ RSpec.describe Task, type: :model do
         expect(task.description).not_to be_nil
       end
       it "is a text" do
-        expect(task.description.is_a?(String)).to be_truthy
+        expect(task.description).to be_a_kind_of(String)
       end
     end
 
@@ -47,7 +47,7 @@ RSpec.describe Task, type: :model do
       end
 
       it "checks if it is a boolean type" do
-        expect(task.done_status.is_a?(Boolean)).to be_truthy
+        expect(task.done_status).to be_a_kind_of(Boolean)
       end
 
       it "checks if it is a boolean value of false" do
