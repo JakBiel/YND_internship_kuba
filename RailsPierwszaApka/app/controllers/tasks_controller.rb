@@ -2,13 +2,16 @@ class TasksController < ApplicationController
 
   def index
 
+    size_number = 3
+
     if params[:done_status] == nil
-      @tasks = Task.where(to_do_list_id: params[:to_do_list_id]).all
+      @tasks = Task.where(to_do_list_id: params[:to_do_list_id]).all.page(params[:page]).per(size_number)
     else
-      @tasks = Task.where(done_status: params[:done_status], to_do_list_id: params[:to_do_list_id]).all
+      @tasks = Task.where(done_status: params[:done_status], to_do_list_id: params[:to_do_list_id]).all.page(params[:page]).per(size_number)
     end
 
-    render json: @tasks
+      #render json: @tasks
+    render json: { tasks: @tasks, meta: meta_data(@tasks) }
   end
 
   def show
