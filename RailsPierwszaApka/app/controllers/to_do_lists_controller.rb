@@ -29,6 +29,6 @@ class ToDoListsController < ApplicationController
 
   private
   def to_do_list_params
-    params.require(:to_do_list).permit(:name, :project_id)
+    params.require(:to_do_list).permit(:name)
   end
 end

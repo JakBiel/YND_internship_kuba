@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    @comments = Comment.where(task_id: params[:task_id]).all
+    @comments = Comment.where(to_do_list_id: params[:to_do_list_id]).all
 
     render json: @comments
   end
@@ -16,14 +16,14 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.create(comment_params.merge(task_id: params[:task_id]))
+    @comment = Comment.create(comment_params.merge(to_do_list_id: params[:to_do_list_id]))
 
     render json: @comment
   end
 
   private
   def comment_params
-    params.require(:comment).permit(:body)
+    params.require(:comment).permit(:username, :post_date, :page, :body, :file)
   end
 
 end
