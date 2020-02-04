@@ -1,14 +1,4 @@
 FactoryBot.define do
-
-  factory :comment do
-    association :to_do_list
-    username { "MyString" }
-    post_date { "2020-02-03" }
-    page { "5" }
-    body { "MyString" }
-    file { "MyText" }
-  end
-
   factory :project do
     name { "Johnasdfdsl" }
     description  { "Test" }
