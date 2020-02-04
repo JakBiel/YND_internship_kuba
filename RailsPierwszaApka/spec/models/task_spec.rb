@@ -9,7 +9,7 @@ RSpec.describe Task, type: :model do
         expect(task.name).not_to be_nil
       end
       it "is name that is not shorter than 6 characters" do
-        expect(task.name.size).to be > 6
+        expect(task.name.size).to be >= 6
       end
     end
 
@@ -18,7 +18,7 @@ RSpec.describe Task, type: :model do
         expect(task.description).not_to be_nil
       end
       it "is a text" do
-        expect(task.description).to be_an_instance_of(String)
+        expect(task.description).to be_kind_of(String)
       end
     end
 
@@ -27,7 +27,7 @@ RSpec.describe Task, type: :model do
         expect(task.due_date).not_to be_nil
       end
       it "has a proper date format" do
-        expect(Date.iso8601(task.due_date)).not_to be_nil
+        expect(task.due_date).to be_kind_of(Date)
       end
     end
 
@@ -47,7 +47,7 @@ RSpec.describe Task, type: :model do
       end
 
       it "checks if it is a boolean type" do
-        expect(task.done_status).to be_an_instance_of(BooleanMatcher)
+        expect(task.done_status).to be_kind_of(FalseClass).or be_kind_of(TrueClass)
       end
 
       it "checks if it is a boolean value of false" do
