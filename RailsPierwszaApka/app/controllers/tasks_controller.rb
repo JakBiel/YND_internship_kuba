@@ -20,13 +20,13 @@ class TasksController < ApplicationController
       @tasks = Task.where(done_status: params[:done_status], to_do_list_id: params[:to_do_list_id]).all
     end
 
-    render json: @tasks
+    render json: { tasks: @tasks }
   end
 
   def show
     @task = Task.find(params[:id])
 
-    render json: @task
+    render json: { tasks: @tasks }
   end
 
   def new
@@ -36,7 +36,7 @@ class TasksController < ApplicationController
     Rails.logger.info(params)
     @task = Task.create(task_params.merge(to_do_list_id: params[:to_do_list_id]))
 
-    render json: @task
+    render json: { tasks: @tasks }
   end
 
   def update
@@ -45,7 +45,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.update( params.require(:task).permit( :done_status))
 
-    render json: @task
+    render json: { tasks: @tasks }
   end
 
   def destroy
