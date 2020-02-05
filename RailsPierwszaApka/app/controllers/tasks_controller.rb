@@ -35,7 +35,7 @@ class TasksController < ApplicationController
   def create
     Rails.logger.info(params)
     @task = Task.create(task_params.merge(to_do_list_id: params[:to_do_list_id]))
-
+    @task.save!
     render json: @task
   end
 
