@@ -26,7 +26,7 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
 
-    render json: { tasks: @tasks }
+    render json: { task: @task }
   end
 
   def new
@@ -36,16 +36,16 @@ class TasksController < ApplicationController
     Rails.logger.info(params)
     @task = Task.create(task_params.merge(to_do_list_id: params[:to_do_list_id]))
 
-    render json: { tasks: @tasks }
+    render json: { task: @task }
   end
 
   def update
 
     Rails.logger.info(params)
     @task = Task.find(params[:id])
-    @task.update( params.require(:task).permit( :done_status))
+    @task.update(params.require(:task).permit( :done_status))
 
-    render json: { tasks: @tasks }
+    render json: { task: @task }
   end
 
   def destroy
