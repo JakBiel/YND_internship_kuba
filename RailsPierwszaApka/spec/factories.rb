@@ -25,7 +25,7 @@ FactoryBot.define do
     description { "Deskrypcja_Taska_1"}
     due_date { "2010-12-11" }
     position { 34 }
-    done_status { "12312234" }
+    done_status { "false" }
   end
 
 

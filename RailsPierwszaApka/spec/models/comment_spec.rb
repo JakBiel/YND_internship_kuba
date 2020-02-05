@@ -11,6 +11,10 @@ RSpec.describe Comment, type: :model do
       it "is name that is not shorter than 5 characters" do
         expect(comment.body.size).to be > 5
       end
+
+      it "is valid: not shorter than 5 characters" do
+        expect(comment).to be_valid
+      end
     end
   end
 end

@@ -5,8 +5,8 @@ RSpec.describe Project, type: :model do
 
   context "<<Name>> parameter" do
 
-    it "should contains at least 6 characters" do
-      expect(project.name.size).to be >= 6
+    it "should contains at least 6 characters, with reference to typical model validation code" do
+      expect(project).to be_valid
     end
 
   end

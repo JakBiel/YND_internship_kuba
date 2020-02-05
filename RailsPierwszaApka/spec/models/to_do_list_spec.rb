@@ -14,6 +14,10 @@ RSpec.describe ToDoList, type: :model do
         expect(to_do_list.name.size).to be >= 6
       end
 
+      it "checks if it is valid (if it's not shorter than 6 characters but uses model validation code)" do
+        expect(to_do_list).to be_valid
+      end
+
     end
   end
 end
