@@ -15,7 +15,7 @@ module RailsPierwszaApka
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'localhost:3006', '130.162.159.44:3005', /http:\/\/192\.168\.0\.\d{1,3}(:\d+)?/
+        origins 'localhost:3006', '139.162.159.44:3005', /http:\/\/192\.168\.0\.\d{1,3}(:\d+)?/
         resource '*', headers: :any, methods: [:get, :post, :options, :patch, :delete]
       end
     end
