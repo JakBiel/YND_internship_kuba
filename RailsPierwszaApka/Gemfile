@@ -69,7 +69,7 @@ gem 'rack-cors'
 gem 'factory_bot_rails'
 
 gem 'kaminari'
-
+gem 'kaminari-core'
 gem "kaminari-api-meta-data", require: "kaminari_api_meta_data"
 
 
