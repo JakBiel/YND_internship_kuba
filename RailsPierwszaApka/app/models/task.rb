@@ -5,4 +5,6 @@ class Task < ApplicationRecord
   validates_numericality_of :position, :greater_than => 0
   validates_inclusion_of :done_status, :in => %w(true false),
                                           :message => "{{value}} is not a valid boolean option"
+  validates_exclusion_of :done_status, :in => %w(true),
+                         :message => "Done_status should be <<false>> in moment of creation by default."
 end
