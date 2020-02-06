@@ -15,7 +15,7 @@ class ToDoListsController < ApplicationController
   def show
     @to_do_list = ToDoList.find(params[:id])
 
-    render json: @to_do_list
+    render json: @to_do_list, serializer: ToDoListSerializer
   end
 
   def new

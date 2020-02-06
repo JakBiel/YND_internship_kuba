@@ -72,4 +72,7 @@ gem 'kaminari'
 gem 'kaminari-core'
 gem "kaminari-api-meta-data", require: "kaminari_api_meta_data"
 
+gem 'active_model_serializers'
+
+gem 'carrierwave'
 

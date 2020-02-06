@@ -52,6 +52,7 @@ class TasksController < ApplicationController
 
     @task = Task.find(params[:id])
     @task.delete
+    head 204
 
   end
 
