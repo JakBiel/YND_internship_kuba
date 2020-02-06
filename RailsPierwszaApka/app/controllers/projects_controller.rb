@@ -34,5 +34,5 @@ class ProjectsController < ApplicationController
 
       params.require(:project).permit(:name, :description)
   end
-  end
+end
 

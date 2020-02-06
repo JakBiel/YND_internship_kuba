@@ -1,10 +1,14 @@
 class ToDoListSerializer < ActiveModel::Serializer
-  attributes :id, :name, :project_id, :completed_tasks
+  attributes :id, :name, :project_id, :completed_tasks, :all_tasks
 
-  has_many :tasks
+  #has_many :tasks
 
   def completed_tasks
-    instance_options[:without_serializer] ? object.task : TaskSerializer.new(object.task, done_status: true)
+    Task.where(done_status: false, to_do_list_id: object.id).all.count
+  end
+
+  def all_tasks
+    Task.where(to_do_list_id: object.id).all.count
   end
 
 end

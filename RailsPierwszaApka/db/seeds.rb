@@ -71,8 +71,8 @@ Task.create("name"=>"Moje_imie_nr_42", "description"=>"Opis mojego taska nr 6", 
 Task.create("name"=>"Moje_imie_nr_43", "description"=>"Opis mojego taska nr 1", "due_date"=>"2020-09-18", "position"=>4, "done_status"=>true, "to_do_list_id"=>8)
 Task.create("name"=>"Moje_imie_nr_44", "description"=>"Opis mojego taska nr 2", "due_date"=>"2020-03-22", "position"=>6, "done_status"=>false, "to_do_list_id"=>8)
 Task.create("name"=>"Moje_imie_nr_45", "description"=>"Opis mojego taska nr 3", "due_date"=>"2020-04-19", "position"=>5, "done_status"=>true, "to_do_list_id"=>8)
-Task.create("name"=>"Moje_imie_nr_46", "description"=>"Opis mojego taska nr 4", "due_date"=>"2020-05-23", "position"=>7, "done_status"=>false, "to_do_list_id"=>8)
-Task.create("name"=>"Moje_imie_nr_47", "description"=>"Opis mojego taska nr 5", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>8)
+#Task.create("name"=>"Moje_imie_nr_46", "description"=>"Opis mojego taska nr 4", "due_date"=>"2020-05-23", "position"=>7, "done_status"=>false, "to_do_list_id"=>8)
+#Task.create("name"=>"Moje_imie_nr_47", "description"=>"Opis mojego taska nr 5", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>8)
 Task.create("name"=>"Moje_imie_nr_48", "description"=>"Opis mojego taska nr 6", "due_date"=>"2020-12-08", "position"=>9, "done_status"=>true, "to_do_list_id"=>8)
 
 Comment.create("username"=>"Taki username 1", "post_date"=>"2000-04-03", "page"=>3, "body"=>"Moj_maly_komentarz_1", "file"=>"Tekst1" ,"to_do_list_id"=>2)

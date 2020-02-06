@@ -9,13 +9,13 @@ class ToDoListsController < ApplicationController
     #@to_do_lists = ToDoList.all.page(params[:page]).per(size_number)
 
       #render json: { to_do_lists: @to_do_lists, meta: { current_page: @to_do_lists.page(params[:page]).current_page, next_page: @to_do_lists.page(params[:page]).next_page, per_page: @to_do_lists.page(params[:page]).per(size_number).size, prev_page: @to_do_lists.page(params[:page]).prev_page, total_pages: @to_do_lists.page(params[:page]).total_pages, total_count: @to_do_lists.page(params[:page]).total_count} }
-    render json: { to_do_lists: @to_do_lists, meta: meta_data(@to_do_lists) }
+    render json: @to_do_lists #,serializer: ToDoListSerializer
   end
 
   def show
     @to_do_list = ToDoList.find(params[:id])
 
-    render json: @to_do_list, serializer: ToDoListSerializer
+    render json: @to_do_list #,serializer: ToDoListSerializer
   end
 
   def new
@@ -25,7 +25,7 @@ class ToDoListsController < ApplicationController
     Rails.logger.info(params)
     @to_do_list = ToDoList.create(to_do_list_params.merge(project_id: params[:project_id]))
 
-    render json: @to_do_list
+    render json: @to_do_list #, serializer: ToDoListSerializer
   end
 
   private
