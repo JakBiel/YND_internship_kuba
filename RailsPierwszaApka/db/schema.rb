@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_07_113953) do
+ActiveRecord::Schema.define(version: 2020_02_07_125429) do
 
   create_table "comments", force: :cascade do |t|
     t.string "user_name"
     t.date "post_date"
-    t.integer "page"
     t.string "body"
     t.text "file"
     t.integer "to_do_list_id"
