@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_03_151422) do
+ActiveRecord::Schema.define(version: 2020_02_07_113953) do
 
   create_table "comments", force: :cascade do |t|
-    t.string "username"
+    t.string "user_name"
     t.date "post_date"
     t.integer "page"
     t.string "body"

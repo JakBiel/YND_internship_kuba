@@ -75,7 +75,7 @@ Task.create("name"=>"Moje_imie_nr_45", "description"=>"Opis mojego taska nr 3", 
 #Task.create("name"=>"Moje_imie_nr_47", "description"=>"Opis mojego taska nr 5", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>8)
 Task.create("name"=>"Moje_imie_nr_48", "description"=>"Opis mojego taska nr 6", "due_date"=>"2020-12-08", "position"=>9, "done_status"=>true, "to_do_list_id"=>8)
 
-Comment.create("username"=>"Taki username 1", "post_date"=>"2000-04-03", "page"=>3, "body"=>"Moj_maly_komentarz_1", "file"=>"Tekst1" ,"to_do_list_id"=>2)
-Comment.create("username"=>"Taki username 2", "post_date"=>"2000-05-04", "page"=>4, "body"=>"Moj_maly_komentarz_2", "file"=>"Tekst2" ,"to_do_list_id"=>2)
-Comment.create("username"=>"Taki username 3", "post_date"=>"2000-06-05", "page"=>5, "body"=>"Moj_maly_komentarz_3", "file"=>"Tekst3" ,"to_do_list_id"=>2)
-Comment.create("username"=>"Taki username 4", "post_date"=>"2000-07-06", "page"=>6, "body"=>"Moj_maly_komentarz_4", "file"=>"Tekst4" ,"to_do_list_id"=>2)
+Comment.create("user_name"=>"Taki username 1", "post_date"=>"2000-04-03", "page"=>3, "body"=>"Moj_maly_komentarz_1", "file"=>"Tekst1" ,"to_do_list_id"=>2)
+Comment.create("user_name"=>"Taki username 2", "post_date"=>"2000-05-04", "page"=>4, "body"=>"Moj_maly_komentarz_2", "file"=>"Tekst2" ,"to_do_list_id"=>2)
+Comment.create("user_name"=>"Taki username 3", "post_date"=>"2000-06-05", "page"=>5, "body"=>"Moj_maly_komentarz_3", "file"=>"Tekst3" ,"to_do_list_id"=>2)
+Comment.create("user_name"=>"Taki username 4", "post_date"=>"2000-07-06", "page"=>6, "body"=>"Moj_maly_komentarz_4", "file"=>"Tekst4" ,"to_do_list_id"=>2)
