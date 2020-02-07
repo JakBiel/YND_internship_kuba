@@ -9,7 +9,8 @@ class ToDoListsController < ApplicationController
     #@to_do_lists = ToDoList.all.page(params[:page]).per(size_number)
 
       #render json: { to_do_lists: @to_do_lists, meta: { current_page: @to_do_lists.page(params[:page]).current_page, next_page: @to_do_lists.page(params[:page]).next_page, per_page: @to_do_lists.page(params[:page]).per(size_number).size, prev_page: @to_do_lists.page(params[:page]).prev_page, total_pages: @to_do_lists.page(params[:page]).total_pages, total_count: @to_do_lists.page(params[:page]).total_count} }
-    render json: @to_do_lists #,serializer: ToDoListSerializer
+    #render json: { to_do_lists: @to_do_lists , meta: meta_data(@to_do_lists) } #,serializer: ToDoListSerializer
+    render json: { to_do_lists: @to_do_lists, meta: meta_data(@to_do_lists) }
   end
 
   def show

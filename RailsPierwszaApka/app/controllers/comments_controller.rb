@@ -1,7 +1,9 @@
 class CommentsController < ApplicationController
 
   def index
-    @comments = Comment.where(to_do_list_id: params[:to_do_list_id]).all
+
+    size_number = 3
+    @comments = Comment.where(to_do_list_id: params[:to_do_list_id]).all.page(params[:page]).per(size_number)
 
     render json: @comments
   end
@@ -19,6 +21,14 @@ class CommentsController < ApplicationController
     @comment = Comment.create(comment_params.merge(to_do_list_id: params[:to_do_list_id]))
 
     render json: @comment
+  end
+
+  def destroy
+
+    @comment = Comment.find(params[:id])
+    @comment.delete
+    head 204
+
   end
 
   private
