@@ -4,7 +4,7 @@ class ToDoListSerializer < ActiveModel::Serializer
   #has_many :tasks
 
   def completed_tasks
-    Task.where(done_status: false, to_do_list_id: object.id).all.count
+    Task.where(done_status: true, to_do_list_id: object.id).all.count
   end
 
   def all_tasks

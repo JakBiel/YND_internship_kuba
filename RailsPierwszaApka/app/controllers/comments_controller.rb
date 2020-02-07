@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     size_number = 3
     @comments = Comment.where(to_do_list_id: params[:to_do_list_id]).all.page(params[:page]).per(size_number)
 
-    render json: @comments
+    render json: {comments: @comments, meta: meta_data(@comments) }#, adapter: :json
   end
 
   def show
