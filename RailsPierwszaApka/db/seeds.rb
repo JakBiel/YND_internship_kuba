@@ -1,81 +1,17 @@
-Project.create("name"=>"Nazwa_nr_1", "description"=>"Opis_nr_1")
-Project.create("name"=>"Nazwa_nr_2", "description"=>"Opis_nr_2")
-Project.create("name"=>"Nazwa_nr_3", "description"=>"Opis_nr_3")
-Project.create("name"=>"Nazwa_nr_4", "description"=>"Opis_nr_4")
-Project.create("name"=>"Nazwa_nr_5", "description"=>"Opis_nr_5")
-Project.create("name"=>"Nazwa_nr_6", "description"=>"Opis_nr_6")
-Project.create("name"=>"Nazwa_nr_7", "description"=>"Opis_nr_7")
-Project.create("name"=>"Nazwa_nr_8", "description"=>"Opis_nr_8")
-Project.create("name"=>"Nazwa_nr_9", "description"=>"Opis_nr_9")
-ToDoList.create("name"=>"Moja_todolista_1_proj1", "project_id"=>1)
-ToDoList.create("name"=>"Moja_todolista_1_proj2", "project_id"=>2)
-ToDoList.create("name"=>"Moja_todolista_2_proj2", "project_id"=>2)
-ToDoList.create("name"=>"Moja_todolista_2_proj1", "project_id"=>1)
-ToDoList.create("name"=>"Moja_todolista_3_proj2", "project_id"=>2)
-ToDoList.create("name"=>"Moja_todolista_4_proj2", "project_id"=>2)
-ToDoList.create("name"=>"Moja_todolista_3_proj1", "project_id"=>1)
-ToDoList.create("name"=>"Moja_todolista_5_proj2", "project_id"=>2)
-ToDoList.create("name"=>"Moja_todolista_6_proj2", "project_id"=>2)
-ToDoList.create("name"=>"Moja_todolista_4_proj1", "project_id"=>1)
-ToDoList.create("name"=>"Moja_todolista_7_proj2", "project_id"=>2)
-ToDoList.create("name"=>"Moja_todolista_8_proj2", "project_id"=>2)
-Task.create("name"=>"Moje_imie_nr_1", "description"=>"Opis mojego taska nr 1", "due_date"=>"2020-09-18", "position"=>4, "done_status"=>true, "to_do_list_id"=>2)
-Task.create("name"=>"Moje_imie_nr_2", "description"=>"Opis mojego taska nr 2", "due_date"=>"2020-03-22", "position"=>6, "done_status"=>false, "to_do_list_id"=>2)
-Task.create("name"=>"Moje_imie_nr_3", "description"=>"Opis mojego taska nr 3", "due_date"=>"2020-04-19", "position"=>5, "done_status"=>true, "to_do_list_id"=>2)
-Task.create("name"=>"Moje_imie_nr_4", "description"=>"Opis mojego taska nr 4", "due_date"=>"2020-05-23", "position"=>7, "done_status"=>false, "to_do_list_id"=>2)
-Task.create("name"=>"Moje_imie_nr_5", "description"=>"Opis mojego taska nr 5", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>2)
-Task.create("name"=>"Moje_imie_nr_6", "description"=>"Opis mojego taska nr 6", "due_date"=>"2020-12-08", "position"=>9, "done_status"=>true, "to_do_list_id"=>2)
+kolekcja1 = (1..3) #do projectsow
+kolekcja2 = (1..3) #do todolist
+kolekcja3 = (1..6) #do taskow
+kolekcja4 = (1..4) #do commentsow
 
-Task.create("name"=>"Moje_imie_nr_7", "description"=>"Opis mojego taska nr 7", "due_date"=>"2020-09-18", "position"=>4, "done_status"=>true, "to_do_list_id"=>1)
-Task.create("name"=>"Moje_imie_nr_8", "description"=>"Opis mojego taska nr 8", "due_date"=>"2020-03-22", "position"=>6, "done_status"=>false, "to_do_list_id"=>1)
-Task.create("name"=>"Moje_imie_nr_9", "description"=>"Opis mojego taska nr 9", "due_date"=>"2020-04-19", "position"=>5, "done_status"=>true, "to_do_list_id"=>1)
-Task.create("name"=>"Moje_imie_nr_10", "description"=>"Opis mojego taska nr 10", "due_date"=>"2020-05-23", "position"=>7, "done_status"=>false, "to_do_list_id"=>1)
-Task.create("name"=>"Moje_imie_nr_11", "description"=>"Opis mojego taska nr 11", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>1)
-Task.create("name"=>"Moje_imie_nr_12", "description"=>"Opis mojego taska nr 12", "due_date"=>"2020-12-08", "position"=>9, "done_status"=>true, "to_do_list_id"=>1)
-
-Task.create("name"=>"Moje_imie_nr_13", "description"=>"Opis mojego taska nr 13", "due_date"=>"2020-09-18", "position"=>4, "done_status"=>true, "to_do_list_id"=>3)
-Task.create("name"=>"Moje_imie_nr_14", "description"=>"Opis mojego taska nr 14", "due_date"=>"2020-03-22", "position"=>6, "done_status"=>false, "to_do_list_id"=>3)
-Task.create("name"=>"Moje_imie_nr_15", "description"=>"Opis mojego taska nr 3", "due_date"=>"2020-04-19", "position"=>5, "done_status"=>true, "to_do_list_id"=>3)
-Task.create("name"=>"Moje_imie_nr_16", "description"=>"Opis mojego taska nr 4", "due_date"=>"2020-05-23", "position"=>7, "done_status"=>false, "to_do_list_id"=>3)
-Task.create("name"=>"Moje_imie_nr_17", "description"=>"Opis mojego taska nr 5", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>3)
-Task.create("name"=>"Moje_imie_nr_18", "description"=>"Opis mojego taska nr 6", "due_date"=>"2020-12-08", "position"=>9, "done_status"=>true, "to_do_list_id"=>3)
-
-Task.create("name"=>"Moje_imie_nr_19", "description"=>"Opis mojego taska nr 1", "due_date"=>"2020-09-18", "position"=>4, "done_status"=>true, "to_do_list_id"=>4)
-Task.create("name"=>"Moje_imie_nr_20", "description"=>"Opis mojego taska nr 2", "due_date"=>"2020-03-22", "position"=>6, "done_status"=>false, "to_do_list_id"=>4)
-Task.create("name"=>"Moje_imie_nr_21", "description"=>"Opis mojego taska nr 3", "due_date"=>"2020-04-19", "position"=>5, "done_status"=>true, "to_do_list_id"=>4)
-Task.create("name"=>"Moje_imie_nr_22", "description"=>"Opis mojego taska nr 4", "due_date"=>"2020-05-23", "position"=>7, "done_status"=>false, "to_do_list_id"=>4)
-Task.create("name"=>"Moje_imie_nr_23", "description"=>"Opis mojego taska nr 5", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>4)
-Task.create("name"=>"Moje_imie_nr_24", "description"=>"Opis mojego taska nr 6", "due_date"=>"2020-12-08", "position"=>9, "done_status"=>true, "to_do_list_id"=>4)
-
-Task.create("name"=>"Moje_imie_nr_25", "description"=>"Opis mojego taska nr 1", "due_date"=>"2020-09-18", "position"=>4, "done_status"=>true, "to_do_list_id"=>5)
-Task.create("name"=>"Moje_imie_nr_26", "description"=>"Opis mojego taska nr 2", "due_date"=>"2020-03-22", "position"=>6, "done_status"=>false, "to_do_list_id"=>5)
-Task.create("name"=>"Moje_imie_nr_27", "description"=>"Opis mojego taska nr 3", "due_date"=>"2020-04-19", "position"=>5, "done_status"=>true, "to_do_list_id"=>5)
-Task.create("name"=>"Moje_imie_nr_28", "description"=>"Opis mojego taska nr 4", "due_date"=>"2020-05-23", "position"=>7, "done_status"=>false, "to_do_list_id"=>5)
-Task.create("name"=>"Moje_imie_nr_29", "description"=>"Opis mojego taska nr 5", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>5)
-Task.create("name"=>"Moje_imie_nr_30", "description"=>"Opis mojego taska nr 6", "due_date"=>"2020-12-08", "position"=>9, "done_status"=>true, "to_do_list_id"=>5)
-
-Task.create("name"=>"Moje_imie_nr_31", "description"=>"Opis mojego taska nr 1", "due_date"=>"2020-09-18", "position"=>4, "done_status"=>true, "to_do_list_id"=>6)
-Task.create("name"=>"Moje_imie_nr_32", "description"=>"Opis mojego taska nr 2", "due_date"=>"2020-03-22", "position"=>6, "done_status"=>false, "to_do_list_id"=>6)
-Task.create("name"=>"Moje_imie_nr_33", "description"=>"Opis mojego taska nr 3", "due_date"=>"2020-04-19", "position"=>5, "done_status"=>true, "to_do_list_id"=>6)
-Task.create("name"=>"Moje_imie_nr_34", "description"=>"Opis mojego taska nr 4", "due_date"=>"2020-05-23", "position"=>7, "done_status"=>false, "to_do_list_id"=>6)
-Task.create("name"=>"Moje_imie_nr_35", "description"=>"Opis mojego taska nr 5", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>6)
-Task.create("name"=>"Moje_imie_nr_36", "description"=>"Opis mojego taska nr 6", "due_date"=>"2020-12-08", "position"=>9, "done_status"=>true, "to_do_list_id"=>6)
-
-Task.create("name"=>"Moje_imie_nr_37", "description"=>"Opis mojego taska nr 1", "due_date"=>"2020-09-18", "position"=>4, "done_status"=>true, "to_do_list_id"=>7)
-Task.create("name"=>"Moje_imie_nr_38", "description"=>"Opis mojego taska nr 2", "due_date"=>"2020-03-22", "position"=>6, "done_status"=>false, "to_do_list_id"=>7)
-Task.create("name"=>"Moje_imie_nr_39", "description"=>"Opis mojego taska nr 3", "due_date"=>"2020-04-19", "position"=>5, "done_status"=>true, "to_do_list_id"=>7)
-Task.create("name"=>"Moje_imie_nr_40", "description"=>"Opis mojego taska nr 4", "due_date"=>"2020-05-23", "position"=>7, "done_status"=>false, "to_do_list_id"=>7)
-Task.create("name"=>"Moje_imie_nr_41", "description"=>"Opis mojego taska nr 5", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>7)
-Task.create("name"=>"Moje_imie_nr_42", "description"=>"Opis mojego taska nr 6", "due_date"=>"2020-12-08", "position"=>9, "done_status"=>true, "to_do_list_id"=>7)
-
-Task.create("name"=>"Moje_imie_nr_43", "description"=>"Opis mojego taska nr 1", "due_date"=>"2020-09-18", "position"=>4, "done_status"=>true, "to_do_list_id"=>8)
-Task.create("name"=>"Moje_imie_nr_44", "description"=>"Opis mojego taska nr 2", "due_date"=>"2020-03-22", "position"=>6, "done_status"=>false, "to_do_list_id"=>8)
-Task.create("name"=>"Moje_imie_nr_45", "description"=>"Opis mojego taska nr 3", "due_date"=>"2020-04-19", "position"=>5, "done_status"=>true, "to_do_list_id"=>8)
-#Task.create("name"=>"Moje_imie_nr_46", "description"=>"Opis mojego taska nr 4", "due_date"=>"2020-05-23", "position"=>7, "done_status"=>false, "to_do_list_id"=>8)
-#Task.create("name"=>"Moje_imie_nr_47", "description"=>"Opis mojego taska nr 5", "due_date"=>"2020-11-07", "position"=>8, "done_status"=>false, "to_do_list_id"=>8)
-Task.create("name"=>"Moje_imie_nr_48", "description"=>"Opis mojego taska nr 6", "due_date"=>"2020-12-08", "position"=>9, "done_status"=>true, "to_do_list_id"=>8)
-
-Comment.create("user_name"=>"Taki username 1", "post_date"=>"2000-04-03", "page"=>3, "body"=>"Moj_maly_komentarz_1", "file"=>"Tekst1" ,"to_do_list_id"=>2)
-Comment.create("user_name"=>"Taki username 2", "post_date"=>"2000-05-04", "page"=>4, "body"=>"Moj_maly_komentarz_2", "file"=>"Tekst2" ,"to_do_list_id"=>2)
-Comment.create("user_name"=>"Taki username 3", "post_date"=>"2000-06-05", "page"=>5, "body"=>"Moj_maly_komentarz_3", "file"=>"Tekst3" ,"to_do_list_id"=>2)
-Comment.create("user_name"=>"Taki username 4", "post_date"=>"2000-07-06", "page"=>6, "body"=>"Moj_maly_komentarz_4", "file"=>"Tekst4" ,"to_do_list_id"=>2)
+kolekcja1.each do |numer1|
+  Project.create("name"=>"Nazwa_nr_#{numer1}", "description"=>"Opis_nr_#{numer1}")
+  kolekcja2.each do |numer2|
+    ToDoList.create("name"=>"Moja_todolista_#{numer2}", "project_id"=>numer1)
+    kolekcja3.each do |numer3|
+      Task.create("name"=>"Moje_imie_nr_#{numer3}", "description"=>"Opis mojego taska nr #{numer3}", "due_date"=>"2020-09-20", "position"=>numer3+1, "done_status"=>true, "to_do_list_id"=>numer2)
+    end
+    kolekcja4.each do |numer4|
+      Comment.create("user_name"=>"Taki username_#{numer4}", "post_date"=>"2000-04-03", "body"=>"Moj_maly_komentarz_#{numer4}", "file"=>"Tekst#{numer4}" ,"to_do_list_id"=>numer2)
+    end
+  end
+end
